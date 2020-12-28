@@ -57,6 +57,8 @@ group :development do
   gem "capistrano-bundler", require: false
   gem "capistrano-sidekiq", require: false
   gem "capistrano3-puma", "~> 4.0", require: false
+  gem "ed25519"
+  gem "bcrypt_pbkdf"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

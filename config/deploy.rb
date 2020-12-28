@@ -4,7 +4,7 @@
 lock("~> 3.14.1")
 
 set(:application, "xd_hospital")
-set(:repo_url, "git@github.com:csxiaodiao/xd_hospital.git")
+set(:repo_url, "git@github.com:csxiaodiao/xd_card.git")
 
 set(:rails_env, fetch(:stage))
 set(:deploy_to, "/apps/#{fetch(:application)}_#{fetch(:rails_env)}")
