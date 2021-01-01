@@ -34,6 +34,9 @@ gem "devise", "~> 4.7", ">= 4.7.3"
 
 gem "omniauth-wechat-oauth2", path: "lib/gems/omniauth-wechat-oauth2"
 
+gem("enumerize", "~> 2.3", ">= 2.3.1")
+gem("aasm", "~> 5.0", ">= 5.0.6")
+
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.4.2", require: false
 

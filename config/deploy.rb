@@ -15,6 +15,7 @@ append(
   "config/sidekiq.yml",
   "config/storage.yml",
   "config/webpacker.yml",
+  "config/wechat.yml",
   ".ruby-gemset",
   ".ruby-version"
 )
