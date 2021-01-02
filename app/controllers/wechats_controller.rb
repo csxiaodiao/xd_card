@@ -5,7 +5,7 @@ class WechatsController < ApplicationController
 
 
   on :event, with: 'subscribe' do |request|
-    request.reply.text '终于等到您，还好我没放弃~
+    request.reply.text '终于等到您，还好我没放弃~<br/>
 现代口腔感谢您的关注和支持！<br/>
 <a href="http://wx.bestpv.cn/card">百万诊疗金领取</a>👈
 【医院地址/咨询热线】<br/>
