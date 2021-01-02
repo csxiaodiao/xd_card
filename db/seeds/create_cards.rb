@@ -1,7 +1,6 @@
 UserCard.destroy_all
 Card.destroy_all
-ActiveRecord::Base.connection.execute("TRUNCATE user_cards RESTART IDENTITY")
-ActiveRecord::Base.connection.execute("TRUNCATE cards RESTART IDENTITY")
+
 items = [
   # er
   { name: "儿牙诊疗金", desc_name: "儿童预成冠", kind: "er", cost: 15, sku: 300 },
