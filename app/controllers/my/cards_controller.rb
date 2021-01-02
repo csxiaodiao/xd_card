@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class My::CardsController < BaseController
+  layout 'application'
 
   before_action :find_card, only: [:show, :edit, :update]
 
