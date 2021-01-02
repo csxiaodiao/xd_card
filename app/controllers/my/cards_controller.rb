@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
 class My::CardsController < BaseController
-  layout 'application'
-
   before_action :find_card, only: [:show, :edit, :update]
 
 
   def index
-    @received_cards = current_user.cards.where("expiration_date > ?", Time.now)
+    @cards = current_user.can_use_cards
   end
 
   def show

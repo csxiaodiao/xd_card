@@ -7,11 +7,18 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i[wechat]
 
   has_many :user_cards
-  has_many :cards, -> { with_status(:received) }, through: :user_cards
+  has_many :cards, through: :user_cards
 
 
-  def received_cards
-    cards.with_status(:finished).map(&:kind)
+  def received_and_finished_cards
+    cards.with_status(:received, :finished)
+  end
+  def can_use_cards
+    cards.with_status(:received).where("expiration_date > ?", Time.now)
+  end
+
+  def received_cards_kinds
+    received_and_finished_cards.map(&:kind).uniq
   end
 
 

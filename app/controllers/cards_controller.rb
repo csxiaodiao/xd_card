@@ -3,7 +3,7 @@
 class CardsController < BaseController
   wechat_api
   def show
-    @received_cards = current_user.received_cards
+    @received_cards = current_user.received_cards_kinds
   end
 
   def receive
