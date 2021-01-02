@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
 class My::CardsController < BaseController
+  wechat_api
   before_action :find_card, only: [:show, :edit, :update]
-
-
   def index
     @cards = current_user.can_use_cards
   end
