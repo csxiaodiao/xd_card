@@ -1,0 +1,8 @@
+button:
+  - type: 'view'
+    name: '百万诊疗金'
+    url: 'http://wx.bestpv.cn/card'
+
+  - type: 'view'
+    name: '我的抵用券'
+    url: 'http://wx.bestpv.cn/my/cards'

@@ -27,7 +27,8 @@ gem "jbuilder", "~> 2.7"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-gem "wechat", path: "lib/gems/wechat"
+# gem "wechat", path: "lib/gems/wechat"
+gem "wechat"
 
 
 gem "devise", "~> 4.7", ">= 4.7.3"
