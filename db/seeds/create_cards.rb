@@ -1,3 +1,5 @@
+Card.destroy_all
+ActiveRecord::Base.connection.execute("TRUNCATE cards RESTART IDENTITY")
 items = [
   # er
   { name: "儿牙诊疗金", desc_name: "儿童预成冠", kind: "er", cost: 15, sku: 300 },
@@ -19,12 +21,12 @@ items = [
   { name: "种植诊疗金", desc_name: "种植", kind: "zz", cost: 880, sku: 100 },
   { name: "种植诊疗金", desc_name: "种植", kind: "zz", cost: 980, sku: 50 },
 
-  { name: "传统矫正诊疗金", desc_name: "传统矫正", kind: "jz", cost: 880, sku: 300 },
-  { name: "传统矫正诊疗金", desc_name: "传统矫正", kind: "jz", cost: 980, sku: 250 },
-  { name: "国产时代天使诊疗金", desc_name: "国产时代天使", kind: "jz", cost: 1680, sku: 210 },
-  { name: "国产时代天使诊疗金", desc_name: "国产时代天使", kind: "jz", cost: 2000, sku: 160 },
-  { name: "进口隐适美隐形矫正诊疗金", desc_name: "进口隐适美隐形矫正", kind: "jz", cost: 2680, sku: 50 },
-  { name: "进口隐适美隐形矫正诊疗金", desc_name: "进口隐适美隐形矫正", kind: "jz", cost: 3000, sku: 30 },
+  { name: "传统矫正诊疗金", desc_name: "传统矫正", kind: "zj", cost: 880, sku: 300 },
+  { name: "传统矫正诊疗金", desc_name: "传统矫正", kind: "zj", cost: 980, sku: 250 },
+  { name: "国产时代天使诊疗金", desc_name: "国产时代天使", kind: "zj", cost: 1680, sku: 210 },
+  { name: "国产时代天使诊疗金", desc_name: "国产时代天使", kind: "zj", cost: 2000, sku: 160 },
+  { name: "进口隐适美隐形矫正诊疗金", desc_name: "进口隐适美隐形矫正", kind: "zj", cost: 2680, sku: 50 },
+  { name: "进口隐适美隐形矫正诊疗金", desc_name: "进口隐适美隐形矫正", kind: "zj", cost: 3000, sku: 30 },
 
   { name: "美白诊疗金", desc_name: "美白", kind: "mb", cost: 88, sku: 350 },
   { name: "美白诊疗金", desc_name: "美白", kind: "mb", cost: 128, sku: 350 },
