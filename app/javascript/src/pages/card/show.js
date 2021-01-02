@@ -13,7 +13,7 @@ window.___page__cards__show = function () {
       var $this = $(this);
 
       console.log($this.data('kind'));
-
+      $this.removeClass('xd_card');
       var kind = $this.data('kind');
       var imagePaths = [];
       imagePaths.push('/images/');
