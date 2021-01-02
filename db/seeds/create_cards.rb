@@ -1,4 +1,6 @@
+UserCard.destroy_all
 Card.destroy_all
+ActiveRecord::Base.connection.execute("TRUNCATE user_cards RESTART IDENTITY")
 ActiveRecord::Base.connection.execute("TRUNCATE cards RESTART IDENTITY")
 items = [
   # er
