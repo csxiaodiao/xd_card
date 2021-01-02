@@ -24,6 +24,7 @@ module XdHospital
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
+    config.x.wechat = config_for(:wechat).with_indifferent_access
     config.time_zone = 'Beijing'
     config.i18n.enforce_available_locales = false
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]

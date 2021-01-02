@@ -270,9 +270,12 @@ Devise.setup do |config|
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
-  # up on your models and hooks.  
+  # up on your models and hooks.
 
-  config.omniauth :wechat, "wx79161f22e7b28d66", "fbbafa2e5118bf64a590b64c13015b8d", authorize_params: { scope: "snsapi_base" }
+  config.omniauth :wechat,
+                  Rails.application.config.x.wechat[:appid],
+                  Rails.application.config.x.wechat[:secret],
+                  authorize_params: { scope: "snsapi_base" }
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

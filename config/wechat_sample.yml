@@ -2,8 +2,8 @@ default: &default
   appid: 'xxxxx'
   secret: 'xxxxx'
   token: 'xxxxx'
-  access_token: '/var/tmp/wechat_access_token'
-  jsapi_ticket: '/var/tmp/wechat_jsapi_ticket'
+  access_token: <%= File.expand_path('../tmp/sockets/wechat_access_token', __FILE__) %>
+  jsapi_ticket: <%= File.expand_path('../tmp/sockets/wechat_jsapi_ticket', __FILE__) %>
 
 production:
   <<: *default
