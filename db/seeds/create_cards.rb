@@ -13,11 +13,11 @@ items = [
   { name: "全瓷冠诊疗金", desc_name: "全瓷冠", kind: "xf", cost: 500, sku: 50 },
 
 
-  { name: "种植诊疗金", desc_name: "种植", kind: "zj", cost: 580, sku: 325 },
-  { name: "种植诊疗金", desc_name: "种植", kind: "zj", cost: 680, sku: 275 },
-  { name: "种植诊疗金", desc_name: "种植", kind: "zj", cost: 780, sku: 250 },
-  { name: "种植诊疗金", desc_name: "种植", kind: "zj", cost: 880, sku: 100 },
-  { name: "种植诊疗金", desc_name: "种植", kind: "zj", cost: 980, sku: 50 },
+  { name: "种植诊疗金", desc_name: "种植", kind: "zz", cost: 580, sku: 325 },
+  { name: "种植诊疗金", desc_name: "种植", kind: "zz", cost: 680, sku: 275 },
+  { name: "种植诊疗金", desc_name: "种植", kind: "zz", cost: 780, sku: 250 },
+  { name: "种植诊疗金", desc_name: "种植", kind: "zz", cost: 880, sku: 100 },
+  { name: "种植诊疗金", desc_name: "种植", kind: "zz", cost: 980, sku: 50 },
 
   { name: "传统矫正诊疗金", desc_name: "传统矫正", kind: "jz", cost: 880, sku: 300 },
   { name: "传统矫正诊疗金", desc_name: "传统矫正", kind: "jz", cost: 980, sku: 250 },
