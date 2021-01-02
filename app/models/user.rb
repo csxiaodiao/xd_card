@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
 
   def received_cards
-    cards.map(&:kind)
+    cards.with_status(:finished).map(&:kind)
   end
 
 
