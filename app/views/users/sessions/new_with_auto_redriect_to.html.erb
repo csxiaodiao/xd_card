@@ -1,0 +1,20 @@
+<div class="wrap">
+
+  <script type="text/javascript">
+    function delayURL(url, time) {
+      setTimeout("top.location.href='" + url + "'", time);
+    }
+  </script>
+  如果不跳转，请点击下面链接
+  <a href="<%= user_wechat_omniauth_authorize_path %>">点此跳转</a>
+  <script type="text/javascript">
+    delayURL("<%= user_wechat_omniauth_authorize_path %>", 1);
+  </script>
+
+</div>
+
+<style type="text/css">
+  #flash_alert_div {
+    display: none;
+  }
+</style>

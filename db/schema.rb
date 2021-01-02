@@ -60,6 +60,8 @@ ActiveRecord::Schema.define(version: 2020_12_31_052320) do
   create_table "user_cards", force: :cascade do |t|
     t.bigint "user_id", null: false, comment: "用户"
     t.bigint "card_id", null: false, comment: "卡券"
+    t.string "kind", null: false, comment: "大分类"
+    t.integer "hospital_id"
     t.datetime "use_date"
     t.datetime "received_date"
     t.datetime "created_at", precision: 6, null: false

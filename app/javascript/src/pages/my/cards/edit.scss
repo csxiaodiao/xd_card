@@ -1,0 +1,100 @@
+body.my__cards__edit {
+
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 100%;
+
+
+  a {
+    text-decoration: none;
+  }
+
+  background-color: #ba0107;
+  padding: 5rem 0.9375rem 0;
+
+  .coupon_detail {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 0.3125rem;
+
+    .top_controduct {
+      margin-bottom: 1.875rem;
+      border-bottom: 0.0625rem dashed #ccc;
+    }
+  }
+
+  .use_coupon {
+    background-color: #ba0107;
+    color: #fff;
+    font-size: 0.875rem;
+    width: 90%;
+    padding: 0.625rem 0;
+    border-radius: 0.25rem;
+    margin: 1.25rem 0;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+
+    .coupon_tit {
+      font-weight: 400;
+      box-sizing: border-box;
+    }
+
+    .p_txt {
+      text-align: left;
+      font-size: 0.875rem;
+    }
+
+    .tel {
+      text-align: center;
+      color: #333;
+      font-size: 0.75rem;
+    }
+
+    .name,
+    .p_txt span {
+      font-size: 0.75rem;
+      color: #333;
+    }
+  }
+
+
+
+  .choose_store {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.625rem 0;
+    border-bottom: 0.0625rem solid #ccc;
+
+    .store_label {
+      font-size: 0.875rem;
+      margin-right: 1.25rem;
+      color: #333;
+      width: 3.75rem;
+      text-align: left;
+    }
+
+    .store_label__bd {
+      text-align: left;
+      width: calc(100% - 5rem);
+
+      .store_select {
+        padding: 0.1875rem 0.9375rem;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+
+
+
+
+
+
+}

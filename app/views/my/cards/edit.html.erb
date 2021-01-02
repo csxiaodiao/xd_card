@@ -1,0 +1,42 @@
+  <div class="coupon_detail">
+    <div class="top_controduct">
+      <div class="name">现代口腔医院</div>
+      <h3 class="coupon_tit"><%= @card.name%>抵扣券</h3>
+      <p class="tel"></p>
+    </div>
+
+    <%= form_for [:my, @card] do |f|%>
+      <%= f.hidden_field :id %>
+      <div class="choose_store">
+        <div class="store_label">
+          <label for="select2">消费门店</label>
+        </div>
+        <div class="store_label__bd">
+          <%= select_tag :hospital_id, options_for_select(Card.hospitals), class: "store_select"%>
+        </div>
+      </div>
+      <div class="choose_store">
+        <div class="store_label">
+          <label for="v_code">验证码</label>
+        </div>
+        <div class="store_label__bd">
+          <%= text_field_tag :v_code, {}, class:"store_select", placeholder:"询问店员或由店员输入"%>
+        </div>
+      </div>
+      <button class="use_coupon" type="submit">确认使用</button>
+      <!-- <a href="" class="use_coupon">确认使用</a> -->
+    <%end%>
+  </div>
+
+
+<% if flash[:alert]%>
+<div class="js_dialog">
+  <div class="weui-mask"></div>
+  <div class="weui-dialog">
+    <div class="weui-dialog__bd receive_notice"><%= flash[:alert] %></div>
+    <div class="weui-dialog__ft">
+      <a href="javascript:" class="weui-dialog__btn weui-dialog__btn_primary">好的</a>
+    </div>
+  </div>
+</div>
+<%end%>

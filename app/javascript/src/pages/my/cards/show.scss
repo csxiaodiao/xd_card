@@ -1,0 +1,96 @@
+body.my__cards__show {
+
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 100%;
+
+
+  a {
+    text-decoration: none;
+  }
+
+  background-color: #ba0107;
+  padding-top: 1.875rem;
+
+  .coupon_detail {
+    background-color: #fff;
+    text-align: center;
+    padding: 2.5rem 1.25rem;
+    position: relative;
+    box-sizing: border-box;
+
+    .top_controduct {
+      margin-bottom: 1.875rem;
+
+      .use_coupon {
+        background-color: #ba0107;
+        color: #fff;
+        font-size: 14px;
+        padding: 4px 30px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        display: inline-block;
+        box-sizing: border-box;
+      }
+
+      .coupon_tit {
+        font-weight: bold;
+        font-size: 18px;
+        padding: 15px 0;
+        box-sizing: border-box;
+      }
+
+      .p_txt {
+        text-align: left;
+        font-size: 0.875rem;
+      }
+
+      .name {
+        font-size: 1.125rem;
+      }
+
+      .p_txt span {
+        font-size: 0.75rem;
+        color: #333;
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+  .bottom_detail {
+    .detail_tit {
+      text-align: left;
+      font-size: 0.875rem;
+      height: 1.875rem;
+      border-bottom: 0.0625rem solid #ccc;
+    }
+
+    .detail_item {
+      display: flex;
+      padding: 0.625rem 0;
+      align-items: flex-start;
+      box-sizing: border-box;
+
+      .left_contro {
+        width: 5rem;
+        font-size: 0.75rem;
+        color: #333;
+      }
+
+      .right_content {
+        width: calc(100% - 5rem);
+        text-align: left;
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+
+}

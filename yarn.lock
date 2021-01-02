@@ -4021,6 +4021,11 @@ jest-worker@^25.4.0:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
+jquery@^3.5.1:
+  version "3.5.1"
+  resolved "https://registry.npm.taobao.org/jquery/download/jquery-3.5.1.tgz#d7b4d08e1bfdb86ad2f1a3d039ea17304717abb5"
+  integrity sha1-17TQjhv9uGrS8aPQOeoXMEcXq7U=
+
 js-base64@^2.1.8:
   version "2.6.4"
   resolved "https://registry.npm.taobao.org/js-base64/download/js-base64-2.6.4.tgz?cache=0&sync_timestamp=1604448575022&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjs-base64%2Fdownload%2Fjs-base64-2.6.4.tgz#f4e686c5de1ea1f867dbcad3d46d969428df98c4"
@@ -5990,6 +5995,11 @@ querystringify@^2.1.1:
   resolved "https://registry.npm.taobao.org/querystringify/download/querystringify-2.2.0.tgz#3345941b4153cb9d082d8eee4cda2016a9aef7f6"
   integrity sha1-M0WUG0FTy50ILY7uTNogFqmu9/Y=
 
+rails-ujs@^5.2.4-4:
+  version "5.2.4-4"
+  resolved "https://registry.npm.taobao.org/rails-ujs/download/rails-ujs-5.2.4-4.tgz#41bf12a3d1d49ad5124d69b87908e1fc2d7a6927"
+  integrity sha1-Qb8So9HUmtUSTWm4eQjh/C16aSc=
+
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5, randombytes@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npm.taobao.org/randombytes/download/randombytes-2.1.0.tgz#df6f84372f0270dc65cdf6291349ab7a473d4f2a"
@@ -7516,6 +7526,11 @@ websocket-extensions@>=0.1.1:
   version "0.1.4"
   resolved "https://registry.npm.taobao.org/websocket-extensions/download/websocket-extensions-0.1.4.tgz#7f8473bc839dfd87608adb95d7eb075211578a42"
   integrity sha1-f4RzvIOd/YdgituV1+sHUhFXikI=
+
+weui@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.npm.taobao.org/weui/download/weui-2.4.1.tgz?cache=0&sync_timestamp=1604659233387&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fweui%2Fdownload%2Fweui-2.4.1.tgz#9f28c08087ba241562bc1db879db9951efc19763"
+  integrity sha1-nyjAgIe6JBVivB24eduZUe/Bl2M=
 
 which-module@^2.0.0:
   version "2.0.0"

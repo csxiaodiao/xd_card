@@ -1,0 +1,36 @@
+  <div class="coupon_detail">
+    <div class="top_controduct">
+      <div class="name">现代口腔医院</div>
+      <div class="coupon_tit"><%= @card.name%></div>
+      <% if @card.received?%>
+        <%= link_to "立即使用", edit_my_card_path, class: "use_coupon"%>
+      <% end%>
+
+      <p class="p_txt">使用条件： <span><%= "满#{@card.cost}.01元可用"%></span></p>
+      <p class="p_txt">可用时间： <span>2021年01月01日-<%= l(@card.expiration_date, format: :date)%></span></p>
+    </div>
+    <div class="bottom_detail">
+      <div class="detail_tit">折扣券详情</div>
+      <div class="detail_item">
+        <div class="left_contro">优惠说明</div>
+        <div class="right_content"><%= @card.use%></div>
+      </div>
+      <div class="detail_item">
+        <div class="left_contro">有效日期</div>
+        <div class="right_content">2021.01.01 - <%= l(@card.expiration_date, format: :dshort)%></div>
+      </div>
+      <div class="detail_item">
+        <div class="left_contro">可用时段</div>
+        <div class="right_content">周一至周日 全天</div>
+      </div>
+      <div class="detail_item">
+        <div class="left_contro">使用说明</div>
+        <div class="right_content">
+          <p>每人限领一张</p>
+          <p>用券须知：</p>
+          <p>本券不可与门诊内其他优惠同享</p>
+          <p>截止日期<%= l(@card.expiration_date, format: :date)%>，过期作废</p>
+        </div>
+      </div>
+    </div>
+  </div>

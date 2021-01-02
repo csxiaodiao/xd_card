@@ -1,0 +1,19 @@
+<div class="top_tic">
+    <div class="coupon">
+    <% @received_cards.each do |x|%>
+      <div class="coupon_item">
+        <div class="contain_box">
+          <div class="coupon_box">
+            <h1><%= x.name%></h1>
+          </div>
+
+        </div>
+        <div class="right_circle">
+          <%= link_to "查看", my_card_path(x)%>
+        </div>
+      </div>
+    <%end%>
+
+    </div>
+
+  </div>

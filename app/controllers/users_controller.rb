@@ -1,5 +1,5 @@
 class UsersController < BaseController
   def cards
-    current_user.cards.
+     @received_cards = current_user.cards
   end
 end

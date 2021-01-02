@@ -10,6 +10,11 @@ class User < ApplicationRecord
   has_many :cards, -> { with_status(:received) }, through: :user_cards
 
 
+  def received_cards
+    cards.map(&:kind)
+  end
+
+
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = "#{auth.uid}@email.com"

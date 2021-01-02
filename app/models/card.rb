@@ -6,6 +6,15 @@ class Card < ApplicationRecord
 
   STATUS = { pending: 1, received: 2, finished: 3, failed: 4, nothing: 5 }
 
+  def self.hospitals
+    [
+      ['北仑现代口腔1', 1],
+      ['北仑现代口腔2', 2],
+      ['北仑现代口腔3', 3],
+      ['北仑现代口腔4', 4],
+    ]
+  end
+
   def self.statuses
     STATUS.with_indifferent_access
   end
