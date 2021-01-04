@@ -2,8 +2,6 @@ class Card < ApplicationRecord
   include AASM
   extend Enumerize
 
-  enumerize :status, in: { padding: 1, receive: 2, finished: 3}, scope: true
-
   STATUS = { pending: 1, received: 2, finished: 3, failed: 4, nothing: 5 }
 
   def self.hospitals
