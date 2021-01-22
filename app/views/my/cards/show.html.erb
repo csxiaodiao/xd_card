@@ -9,7 +9,7 @@
       <% end%>
 
       <p class="p_txt">使用条件： <span><%= "满#{@card.cost}.01元可用"%></span></p>
-      <p class="p_txt">可用时间： <span>2021年01月01日-<%= l(@card.expiration_date, format: :date)%></span></p>
+      <p class="p_txt">可用时间： <span><%= l(@card.activity.start_at, format: :date)%>-<%= l(@card.activity.end_at, format: :date)%></span></p>
     </div>
     <div class="bottom_detail">
       <div class="detail_tit">折扣券详情</div>
@@ -19,7 +19,7 @@
       </div>
       <div class="detail_item">
         <div class="left_contro">有效日期</div>
-        <div class="right_content">2021.01.01 - <%= l(@card.expiration_date, format: :dshort)%></div>
+        <div class="right_content"><%= l(@card.activity.start_at, format: :dshort)%> - <%= l(@card.activity.end_at, format: :dshort)%></div>
       </div>
       <div class="detail_item">
         <div class="left_contro">可用时段</div>
@@ -31,7 +31,7 @@
           <p>每人限领一张</p>
           <p>用券须知：</p>
           <p>本券不可与门诊内其他优惠同享</p>
-          <p>截止日期<%= l(@card.expiration_date, format: :date)%>，过期作废</p>
+          <p>截止日期<%= l(@card.activity.start_at, format: :date)%>，过期作废</p>
         </div>
       </div>
     </div>
