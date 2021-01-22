@@ -4,8 +4,8 @@ import './show.scss'
 
 window.___page__cards__show = function () {
 
-  // wx.ready(function () {
-  //   wx.hideOptionMenu();
+  wx.ready(function () {
+    wx.hideOptionMenu();
 
     console.log("into card show")
 
@@ -61,6 +61,6 @@ window.___page__cards__show = function () {
     $('.weui-dialog__btn').on('click', function () {
       $(this).parents('.js_dialog').fadeOut(200);
     });
-  // });
+  });
 
 }
