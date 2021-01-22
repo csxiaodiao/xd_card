@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_31_052320) do
+ActiveRecord::Schema.define(version: 2021_01_22_025639) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,16 @@ ActiveRecord::Schema.define(version: 2020_12_31_052320) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "activities", force: :cascade do |t|
+    t.string "name"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.integer "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "kinds", array: true
+  end
+
   create_table "cards", force: :cascade do |t|
     t.string "name", comment: "卡券名"
     t.string "code", comment: "卡券号"
@@ -55,6 +65,8 @@ ActiveRecord::Schema.define(version: 2020_12_31_052320) do
     t.integer "status", default: 1
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "activity_id"
+    t.index ["activity_id"], name: "index_cards_on_activity_id"
   end
 
   create_table "user_cards", force: :cascade do |t|
@@ -89,6 +101,7 @@ ActiveRecord::Schema.define(version: 2020_12_31_052320) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "cards", "activities"
   add_foreign_key "user_cards", "cards"
   add_foreign_key "user_cards", "users"
 end

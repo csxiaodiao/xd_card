@@ -5,20 +5,24 @@
 <div class="ui container ">
   <div class="ui grid">
     <div class="sixteen wide column" style="padding:0px">
-      <img class="ui fluid image" src="/images/bg_h.png">
+      <img class="ui fluid image" src="/images/bg_h<%= "#{@activity.id}"%>.png">
     </div>
-    <div class="sixteen wide column">
-      <% ["er", "mb", "xf", "zj", "zz"].each do|item|%>
+    <% if(@activity.id == 2)%>
+      <div class="sixteen wide column" style="background-image: url('/images/bg_f2.png')">
+    <%else%>
+      <div class="sixteen wide column">
+    <%end%>
+
+      <% @activity.kinds.each do|item|%>
         <%if @received_cards.include?(item)%>
           <img class="ui fluid image" src="<%= "/images/#{item}d.png"%>">
         <%else%>
-          <img class="ui fluid image xd_card" data-kind="<%= "#{item}"%>" src="<%= "/images/#{item}.png"%>">
+          <img class="ui fluid image xd_card" data-kind="<%= "#{item}"%>" data-activity="<%= "#{@activity.id}"%>" src="<%= "/images/#{item}.png"%>">
         <%end%>
       <% end %>
-
     </div>
     <div class="sixteen wide column" style="padding:0px">
-      <img class="ui fluid image" src="/images/bg_f.png">
+      <img class="ui fluid image" src="/images/bg_f<%= "#{@activity.id}"%>.png">
     </div>
   </div>
 </div>

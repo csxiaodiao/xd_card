@@ -9,18 +9,17 @@ class User < ApplicationRecord
   has_many :user_cards
   has_many :cards, through: :user_cards
 
-
-  def received_and_finished_cards
-    cards.with_status(:received, :finished)
+  def received_and_finished_cards(activity)
+    cards.where(activity_id: activity).with_status(:received, :finished)
   end
+
   def can_use_cards
-    cards.with_status(:received).where("expiration_date > ?", Time.now)
+    cards.with_status(:received).where('expiration_date > ?', Time.now)
   end
 
-  def received_cards_kinds
-    received_and_finished_cards.map(&:kind).uniq
+  def received_cards_kinds(activity)
+    received_and_finished_cards(activity).map(&:kind).uniq
   end
-
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|

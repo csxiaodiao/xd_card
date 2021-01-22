@@ -1,14 +1,20 @@
+# frozen_string_literal: true
+
 class Card < ApplicationRecord
   include AASM
   extend Enumerize
 
-  STATUS = { pending: 1, received: 2, finished: 3, failed: 4, nothing: 5 }
+  belongs_to :activity
+
+  enumerize :status, in: { padding: 1, receive: 2, finished: 3 }, scope: true
+
+  STATUS = { pending: 1, received: 2, finished: 3, failed: 4, nothing: 5 }.freeze
 
   def self.hospitals
     [
       ['雅乐门诊', 1],
       ['新碶门诊', 2],
-      ['健安门诊', 3],
+      ['健安门诊', 3]
     ]
   end
 
@@ -16,7 +22,7 @@ class Card < ApplicationRecord
     STATUS.with_indifferent_access
   end
 
-  enumerize :status, in: STATUS, default: :pending,  scope: true
+  enumerize :status, in: STATUS, default: :pending, scope: true
 
   aasm column: :status, enum: true do
     state :pending, initial: true
@@ -31,6 +37,4 @@ class Card < ApplicationRecord
       transitions from: :received, to: :finished
     end
   end
-
-
 end
