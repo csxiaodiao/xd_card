@@ -1,8 +1,17 @@
 button:
-  - type: 'view'
-    name: '百万诊疗金'
-    url: 'http://wx.bestpv.cn/card'
+ -
+  name: "优惠活动"
+  sub_button:
+   -
+    type: "view"
+    name: "百万诊疗金"
+    url: 'http://wx.bestpv.cn/activities/1/card'
+   -
+    type: "view"
+    name: "寒假矫正"
+    url:  "http://wx.bestpv.cn/activities/2/card"
 
   - type: 'view'
     name: '我的抵用券'
     url: 'http://wx.bestpv.cn/my/cards'
+

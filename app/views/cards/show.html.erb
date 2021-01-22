@@ -8,11 +8,11 @@
       <img class="ui fluid image" src="/images/bg_h.png">
     </div>
     <div class="sixteen wide column">
-      <% ["er", "mb", "xf", "zj", "zz"].each do|item|%>
+      <% @activity.kinds.each do|item|%>
         <%if @received_cards.include?(item)%>
           <img class="ui fluid image" src="<%= "/images/#{item}d.png"%>">
         <%else%>
-          <img class="ui fluid image xd_card" data-kind="<%= "#{item}"%>" src="<%= "/images/#{item}.png"%>">
+          <img class="ui fluid image xd_card" data-kind="<%= "#{item}"%>" data-activity="<%= "#{@activity.id}"%>" src="<%= "/images/#{item}.png"%>">
         <%end%>
       <% end %>
 
