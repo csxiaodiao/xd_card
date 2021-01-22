@@ -31,7 +31,7 @@
           <p>每人限领一张</p>
           <p>用券须知：</p>
           <p>本券不可与门诊内其他优惠同享</p>
-          <p>截止日期<%= l(@card.activity.start_at, format: :date)%>，过期作废</p>
+          <p>截止日期<%= l(@card.activity.end_at, format: :date)%>，过期作废</p>
         </div>
       </div>
     </div>
