@@ -5,9 +5,9 @@
 <div class="ui container ">
   <div class="ui grid">
     <div class="sixteen wide column" style="padding:0px">
-      <img class="ui fluid image" src="/images/bg_h.png">
+      <img class="ui fluid image" src="/images/bg_h2.png">
     </div>
-    <div class="sixteen wide column">
+    <div class="sixteen wide column" style="background-image: url('/images/bg_f2.png')">
       <% @activity.kinds.each do|item|%>
         <%if @received_cards.include?(item)%>
           <img class="ui fluid image" src="<%= "/images/#{item}d.png"%>">
@@ -18,7 +18,7 @@
 
     </div>
     <div class="sixteen wide column" style="padding:0px">
-      <img class="ui fluid image" src="/images/bg_f.png">
+      <img class="ui fluid image" src="/images/bg_f2.png">
     </div>
   </div>
 </div>

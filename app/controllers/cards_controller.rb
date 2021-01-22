@@ -11,7 +11,7 @@ class CardsController < BaseController
     code = '1111'
     activity = Activity.find(params[:activity_id])
 
-    unless activity.blank?
+    if activity.blank?
       msg = '活动不存在'
       return render json: { code: '0000', msg: msg }
     end

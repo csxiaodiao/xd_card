@@ -4,8 +4,8 @@ import './show.scss'
 
 window.___page__cards__show = function () {
 
-  wx.ready(function () {
-    wx.hideOptionMenu();
+  // wx.ready(function () {
+  //   wx.hideOptionMenu();
 
     console.log("into card show")
 
@@ -15,14 +15,21 @@ window.___page__cards__show = function () {
       console.log($this.data('kind'));
       $this.removeClass('xd_card');
       var kind = $this.data('kind');
+      var activity = $this.data('activity');
       var imagePaths = [];
+      var urls = [];
       imagePaths.push('/images/');
       imagePaths.push(kind);
       imagePaths.push('d.png');
       var imagePath = imagePaths.join('');
+      urls.push('/activities/')
+      urls.push(activity)
+      urls.push('/card/receive')
+      var url = urls.join('');
+      console.log(url);
       console.log(imagePath);
       $.ajax({
-        url: '/card/receive',
+        url: url,
         method: "POST",
         data: { kind: kind },
         dataType: "json",
@@ -54,6 +61,6 @@ window.___page__cards__show = function () {
     $('.weui-dialog__btn').on('click', function () {
       $(this).parents('.js_dialog').fadeOut(200);
     });
-  });
+  // });
 
 }
