@@ -8,7 +8,7 @@
         <%= link_to "立即使用", edit_my_card_path, class: "use_coupon"%>
       <% end%>
 
-      <p class="p_txt">使用条件： <span><%= @card.kind == 'lpq' ? '到店使用' : "满#{@card.cost}.01元可用"%></span></p>
+      <p class="p_txt">使用条件： <span><%= @card.kind == 'lpq' ? '到店使用（请提前1天致电预约）' : "满#{@card.cost}.01元可用"%></span></p>
       <p class="p_txt">可用时间： <span><%= l(@card.activity.start_at, format: :date)%>-<%= l(@card.activity.end_at, format: :date)%></span></p>
     </div>
     <div class="bottom_detail">
@@ -23,7 +23,7 @@
       </div>
       <div class="detail_item">
         <div class="left_contro">可用时段</div>
-        <div class="right_content">周一至周日 全天</div>
+        <div class="right_content">周一至周日 全天（请提前1天致电预约）</div>
       </div>
       <div class="detail_item">
         <div class="left_contro">使用说明</div>
