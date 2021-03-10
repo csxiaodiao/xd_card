@@ -15,7 +15,7 @@
       <div class="detail_tit">折扣券详情</div>
       <div class="detail_item">
         <div class="left_contro">优惠说明</div>
-        <div class="right_content"><%=raw @card.use%></div>
+        <div class="right_content"><%=raw @card.use.split("\n").join("<br/>")%></div>
       </div>
       <div class="detail_item">
         <div class="left_contro">有效日期</div>
