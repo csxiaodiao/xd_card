@@ -13,7 +13,7 @@ class My::CardsController < BaseController
 
   def update
     code = '1111'
-    if params[:v_code] != '666666'
+    if params[:v_code] != '520'
       msg = '核销码不正确，请询问店员确认'
       flash[:alert] = msg
       return redirect_back fallback_location: :back
