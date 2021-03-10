@@ -47,5 +47,6 @@ class My::CardsController < BaseController
   def find_card
     @user_card = current_user.user_cards.find_by_card_id(params[:id])
     @card = @user_card.card
+    @activity = @card.activity
   end
 end
