@@ -2,7 +2,7 @@
 <%= wechat_config_js debug: false, api: %w(hideMenuItems closeWindow) -%>
 
 
-<div class="ui container ">
+<div class="ui container" style="background-color: #e6e6e6;">
   <div class="ui grid">
     <div class="sixteen wide column" style="padding:0px">
       <img class="ui fluid image" src="/images/bg_h<%= "#{@activity.id}"%>.png">
@@ -15,9 +15,9 @@
 
       <% @activity.kinds.each do|item|%>
         <%if @received_cards.include?(item)%>
-          <img class="ui fluid image" style="padding: 20px 0" src="<%= "/images/#{item}d.png"%>">
+          <img class="ui fluid image" style="padding: 40px 0" src="<%= "/images/#{item}d.png"%>">
         <%else%>
-          <img class="ui fluid image xd_card" style="padding: 20px 0" data-kind="<%= "#{item}"%>" data-activity="<%= "#{@activity.id}"%>" src="<%= "/images/#{item}.png"%>">
+          <img class="ui fluid image xd_card" style="padding: 40px 0" data-kind="<%= "#{item}"%>" data-activity="<%= "#{@activity.id}"%>" src="<%= "/images/#{item}.png"%>">
         <%end%>
       <% end %>
     </div>
