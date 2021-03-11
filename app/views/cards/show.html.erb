@@ -2,7 +2,7 @@
 <%= wechat_config_js debug: false, api: %w(hideMenuItems closeWindow) -%>
 
 
-<div class="ui container" style="background-color: #e6e6e6;">
+<div class="ui container" style="background-color: #e6e6e6;padding:0px">
   <div class="ui grid">
     <div class="sixteen wide column" style="padding:0px">
       <img class="ui fluid image" src="/images/bg_h<%= "#{@activity.id}"%>.png">
@@ -10,7 +10,7 @@
     <% if(@activity.id == 2)%>
       <div class="sixteen wide column" style="background-image: url('/images/bg_f2.png')">
     <%else%>
-      <div class="sixteen wide column" style="padding:0px">
+      <div class="sixteen wide column">
     <%end%>
 
       <% @activity.kinds.each do|item|%>
